@@ -158,7 +158,7 @@ footer p{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--text-muted
 footer a{color:var(--accent);text-decoration:none;}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
-.reveal{opacity:1;transform:translateY(0);transition:opacity .7s ease,transform .7s ease;}
+.reveal{opacity:1 !important;transform:translateY(0) !important;transition:opacity .7s ease,transform .7s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 
 @media(max-width:960px){
@@ -173,6 +173,9 @@ footer a{color:var(--accent);text-decoration:none;}
   footer{flex-direction:column;gap:.6rem;text-align:center;padding:1.8rem 1.5rem;}
 }
 @media(max-width:600px){.comp-grid{grid-template-columns:1fr;}}
+
+.reveal, .reveal * { opacity: 1 !important; transform: none !important; }
+section, section > *, .comp-card, .cs-item, .metric-cell, .contact-wrap { opacity: 1 !important; visibility: visible !important; }
 </style>
 </head>
 <body>
@@ -188,7 +191,7 @@ footer a{color:var(--accent);text-decoration:none;}
     <li><a href="#metrics">Impact</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="/cdn-cgi/l/email-protection#4c2e2d202d273e253f24222d223f2d273824253a29207d740c2b212d2520622f2321" class="nav-hire">Hire Me →</a>
+  <a href="mailto:balakrishnansakthivel18@gmail.com" class="nav-hire">Hire Me →</a>
 </nav>
 
 <section id="hero">
@@ -203,7 +206,7 @@ footer a{color:var(--accent);text-decoration:none;}
       Engineer with <strong>8+ years</strong> bridging complex business requirements and highly scalable, fault-tolerant technical solutions. Specialized in <strong>microservices architecture</strong>, <strong>cloud-native deployments</strong> on AWS &amp; GCP, and performance optimization. Passionate about reactive programming and building systems that reduce operational costs while enhancing user experience.
     </p>
     <div class="hero-ctas">
-      <a href="/cdn-cgi/l/email-protection#95f7f4f9f4fee7fce6fdfbf4fbe6f4fee1fdfce3f0f9a4add5f2f8f4fcf9bbf6faf8" class="cta-primary">Get in Touch ↗</a>
+      <a href="mailto:balakrishnansakthivel18@gmail.com" class="cta-primary">Get in Touch ↗</a>
       <a href="https://www.linkedin.com/in/balakrishnan-sakthivel-54a949156" target="_blank" class="cta-ghost">LinkedIn Profile →</a>
       <a href="Balakrishnan_Sakthivel_Resume.pdf" download="Balakrishnan_Sakthivel_Resume.pdf" class="cta-ghost" style="color:var(--accent);border:1px solid var(--accent-border);padding:.45rem 1rem;border-radius:100px;background:var(--accent-dim);">↓ Resume</a>
     </div>
@@ -491,9 +494,9 @@ footer a{color:var(--accent);text-decoration:none;}
       <p>Looking for a Senior Full Stack Architect, Tech Lead, or someone to modernize your backend infrastructure? Let's have a conversation about problems worth solving.</p>
       
 <div class="clinks">
-        <a href="/cdn-cgi/l/email-protection#d3b1b2bfb2b8a1baa0bbbdb2bda0b2b8a7bbbaa5b6bfe2eb93b4beb2babffdb0bcbe" class="clink">
+        <a href="mailto:balakrishnansakthivel18@gmail.com" class="clink">
           <div class="clink-icon">✉️</div>
-          <div><div class="clink-lbl">Email</div><div class="clink-val"><span class="__cf_email__" data-cfemail="b3d1d2dfd2d8c1dac0dbddd2ddc0d2d8c7dbdac5d6df828bf3d4ded2dadf9dd0dcde">[email&#160;protected]</span></div></div>
+          <div><div class="clink-lbl">Email</div><div class="clink-val">balakrishnansakthivel18@gmail.com</div></div>
         </a>
         <a href="tel:9723140616" class="clink">
           <div class="clink-icon">📞</div>
@@ -525,16 +528,41 @@ footer a{color:var(--accent);text-decoration:none;}
 
 <footer>
   <p>© 2025 Balakrishnan Sakthivel · Senior Full Stack Developer &amp; Solutions Architect</p>
-  <p>Irving, TX &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection#6002010c010b120913080e010e13010b14080916050c515820070d01090c4e030f0d"><span class="__cf_email__" data-cfemail="dcbebdb0bdb7aeb5afb4b2bdb2afbdb7a8b4b5aab9b0ede49cbbb1bdb5b0f2bfb3b1">[email&#160;protected]</span></a></p>
+  <p>Irving, TX &nbsp;·&nbsp; <a href="mailto:balakrishnansakthivel18@gmail.com">balakrishnansakthivel18@gmail.com</a></p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function loop(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
+<script>
+const cur=document.getElementById('cur'), ring=document.getElementById('cur-ring');
+let mx=0, my=0, rx=0, ry=0;
+document.addEventListener('mousemove', e=>{
+  mx=e.clientX; my=e.clientY;
+  cur.style.left=mx+'px'; cur.style.top=my+'px';
+});
+(function loop(){
+  rx+=(mx-rx)*.11; ry+=(my-ry)*.11;
+  ring.style.left=rx+'px'; ring.style.top=ry+'px';
+  requestAnimationFrame(loop);
+})();
 
+// Show all reveal elements immediately
 document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
 
+// Accordion toggle for case studies
 function toggleCS(header){
-  const item=header.closest('.cs-item
+  const item = header.closest('.cs-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.cs-item').forEach(i=>i.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target) target.scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
