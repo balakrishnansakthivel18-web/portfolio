@@ -40,7 +40,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.1rem 5rem;display:
 .nav-hire{font-family:'DM Mono',monospace;font-size:.72rem;color:#000;background:var(--accent);padding:.5rem 1.3rem;border-radius:100px;text-decoration:none;letter-spacing:.06em;transition:opacity .2s,transform .2s;}
 .nav-hire:hover{opacity:.85;transform:translateY(-1px);}
 
-#hero{min-height:100vh;display:grid;grid-template-columns:55% 45%;align-items:center;padding:9rem 5rem 5rem;position:relative;gap:3rem;}
+#hero{opacity:1;visibility:visible;min-height:100vh;display:grid;grid-template-columns:55% 45%;align-items:center;padding:9rem 5rem 5rem;position:relative;gap:3rem;}
 .hero-grid{position:absolute;inset:0;pointer-events:none;overflow:hidden;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 80% 80% at 70% 50%,black 20%,transparent 100%);}
 .glow-1{position:absolute;top:15%;right:5%;width:700px;height:700px;pointer-events:none;background:radial-gradient(circle,rgba(0,229,160,.055) 0%,transparent 65%);}
 .glow-2{position:absolute;bottom:5%;left:0;width:500px;height:400px;pointer-events:none;background:radial-gradient(circle,rgba(91,140,255,.04) 0%,transparent 70%);}
@@ -157,14 +157,14 @@ footer{padding:2rem 5rem;border-top:1px solid var(--border);display:flex;align-i
 footer p{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--text-muted);letter-spacing:.05em;}
 footer a{color:var(--accent);text-decoration:none;}
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeUp{from{opacity:1;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
 .reveal{opacity:1 !important;transform:translateY(0) !important;transition:opacity .7s ease,transform .7s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 
 @media(max-width:960px){
   nav{padding:1rem 1.5rem;}
   .nav-links{display:none;}
-  #hero{grid-template-columns:1fr;padding:8rem 1.5rem 3rem;}
+  #hero{opacity:1;visibility:visible;grid-template-columns:1fr;padding:8rem 1.5rem 3rem;}
   .hero-right{display:none;}
   section{padding:4rem 1.5rem;}
   .comp-grid{grid-template-columns:1fr 1fr;}
@@ -179,7 +179,7 @@ footer a{color:var(--accent);text-decoration:none;}
   .nav-hire{font-size:.65rem;padding:.4rem .9rem;}
 
   /* Hero */
-  #hero{padding:6rem 1.2rem 2.5rem;}
+  #hero{opacity:1;visibility:visible;padding:6rem 1.2rem 2.5rem;}
   .hero-name{font-size:clamp(2.2rem,11vw,3.5rem);line-height:1;}
   .hero-designation{font-size:.62rem;letter-spacing:.08em;margin-top:.5rem;}
   .hero-pitch{font-size:.92rem;line-height:1.65;}
@@ -263,7 +263,7 @@ section, section > *, .comp-card, .cs-item, .metric-cell, .contact-wrap { opacit
     <li><a href="#metrics">Impact</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="/cdn-cgi/l/email-protection#4022212c212b322933282e212e33212b34282936252c717800272d21292c6e232f2d" class="nav-hire">Hire Me →</a>
+  <a href="#contact" class="nav-hire">Hire Me →</a>
 </nav>
 
 <section id="hero">
@@ -278,7 +278,7 @@ section, section > *, .comp-card, .cs-item, .metric-cell, .contact-wrap { opacit
       Engineer with <strong>8+ years</strong> bridging complex business requirements and highly scalable, fault-tolerant technical solutions. Specialized in <strong>microservices architecture</strong>, <strong>cloud-native deployments</strong> on AWS &amp; GCP, and performance optimization. Passionate about reactive programming and building systems that reduce operational costs while enhancing user experience.
     </p>
     <div class="hero-ctas">
-      <a href="/cdn-cgi/l/email-protection#f092919c919b829983989e919e83919b84989986959cc1c8b0979d91999cde939f9d" class="cta-primary">Get in Touch ↗</a>
+      <a href="#contact" class="cta-primary">Get in Touch ↗</a>
       <a href="https://www.linkedin.com/in/balakrishnan-sakthivel-54a949156" target="_blank" class="cta-ghost">LinkedIn Profile →</a>
       <a href="Balakrishnan_Sakthivel_Resume.pdf" download="Balakrishnan_Sakthivel_Resume.pdf" class="cta-ghost" style="color:var(--accent);border:1px solid var(--accent-border);padding:.45rem 1rem;border-radius:100px;background:var(--accent-dim);">↓ Resume</a>
     </div>
@@ -566,9 +566,9 @@ section, section > *, .comp-card, .cs-item, .metric-cell, .contact-wrap { opacit
       <p>Looking for a Senior Full Stack Architect, Tech Lead, or someone to modernize your backend infrastructure? Let's have a conversation about problems worth solving.</p>
       
 <div class="clinks">
-        <a href="/cdn-cgi/l/email-protection#3c5e5d505d574e554f54525d524f5d574854554a59500d047c5b515d5550125f5351" class="clink">
+        <a <a href="javascript:void(0)" onclick="sendEmail()" class="clink">
           <div class="clink-icon">✉️</div>
-          <div><div class="clink-lbl">Email</div><div class="clink-val"><span class="__cf_email__" data-cfemail="c4a6a5a8a5afb6adb7acaaa5aab7a5afb0acadb2a1a8f5fc84a3a9a5ada8eaa7aba9">[email&#160;protected]</span></div></div>
+          <div><div class="clink-lbl">Email</div><div class="clink-val">balakrishnansakthivel18@gmail.com</div></div>
         </a>
         <a href="tel:9723140616" class="clink">
           <div class="clink-icon">📞</div>
@@ -600,10 +600,10 @@ section, section > *, .comp-card, .cs-item, .metric-cell, .contact-wrap { opacit
 
 <footer>
   <p>© 2025 Balakrishnan Sakthivel · Senior Full Stack Developer &amp; Solutions Architect</p>
-  <p>Irving, TX &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection#dbb9bab7bab0a9b2a8b3b5bab5a8bab0afb3b2adbeb7eae39bbcb6bab2b7f5b8b4b6"><span class="__cf_email__" data-cfemail="5a383b363b3128332932343b34293b312e32332c3f366b621a3d373b333674393537">[email&#160;protected]</span></a></p>
+  <p>Irving, TX &nbsp;·&nbsp; <a href="javascript:void(0)" onclick="sendEmail()" style="color:var(--text-muted)">balakrishnansakthivel18@gmail.com</a></p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const cur=document.getElementById('cur'), ring=document.getElementById('cur-ring');
 let mx=0, my=0, rx=0, ry=0;
 document.addEventListener('mousemove', e=>{
@@ -620,4 +620,28 @@ document.addEventListener('mousemove', e=>{
 document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
 
 // Accordion toggle for case studies
-funct
+function toggleCS(header){
+  const item = header.closest('.cs-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.cs-item').forEach(i=>i.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+
+// Email handler - split to avoid Cloudflare obfuscation
+function sendEmail(){
+  const u='balakrishnansakthivel18';
+  const d='gmail.com';
+  window.location.href='mailto:'+u+'@'+d;
+}
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target) target.scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
